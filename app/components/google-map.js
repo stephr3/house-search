@@ -9,9 +9,10 @@ export default Ember.Component.extend({
       var container = this.$('.map-display')[0];
       var options = {
         center: this.get('map').center(latitude, longitude),
-        zoom: 15
+        zoom: 15,
       };
       var newMap = this.get('map').findMap(container, options);
+      this.get('map').createBikeLayer(newMap);
       var image = {
         url: 'images/house-emoji.png',
         scaledSize: new google.maps.Size(32, 32)

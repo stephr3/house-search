@@ -17,6 +17,14 @@ export default Ember.Service.extend({
   createInfoWindow(content) {
     return new this.googleMaps.InfoWindow(content);
   },
+  createBikeLayer(map) {
+    // var trafficLayer = new this.googleMaps.TrafficLayer();
+    // trafficLayer.setMap(map);
+    // var transitLayer = new google.maps.TransitLayer();
+    // transitLayer.setMap(map);
+    var bikeLayer = new google.maps.BicyclingLayer();
+    bikeLayer.setMap(map);
+  },
   getPlaces(service, map, request, requestImage) {
     var callback = function(results, status) {
       var newMap = map;
