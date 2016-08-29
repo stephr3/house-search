@@ -14,6 +14,9 @@ export default Ember.Service.extend({
   createService(map) {
     return new this.googleMaps.places.PlacesService(map);
   },
+  createInfoWindow(content) {
+    return new this.googleMaps.InfoWindow(content);
+  },
   getPlaces(service, map, request) {
     var callback = function(results, status) {
       var newMap = map;

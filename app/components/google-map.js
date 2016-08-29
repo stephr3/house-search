@@ -21,7 +21,14 @@ export default Ember.Component.extend({
         map: newMap,
         icon: image
       };
-      this.get('map').createMarker(markerOptions);
+      var marker = this.get('map').createMarker(markerOptions);
+      var infoWindowContent = {
+        content: "<p><strong>Your future home!</strong></p>"
+      };
+      var info = this.get('map').createInfoWindow(infoWindowContent);
+      marker.addListener('click', function(){
+        info.open(newMap, marker);
+      });
       var request = {
         location: this.get('map').center(latitude, longitude),
         radius: '1000',
