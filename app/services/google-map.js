@@ -15,12 +15,9 @@ export default Ember.Service.extend({
     return new this.googleMaps.places.PlacesService(map);
   },
   getPlaces(service, map, request) {
-    var createMarker = function(markerOptions) {
-      return new window.google.maps.Marker(markerOptions);
-    };
     var callback = function(results, status) {
       var newMap = map;
-      {{debugger}}
+      var infoWindow = new window.google.maps.InfoWindow();
       if (status === "OK") {
         for (var i=0; i<results.length; i++) {
           var place = results[i];
@@ -31,9 +28,24 @@ export default Ember.Service.extend({
           var markerOptions = {
             position: {lat: place.geometry.location.lat(), lng: place.geometry.location.lng()},
             map: newMap,
-            icon: school_image
-          }
-          createMarker(markerOptions);
+            icon: school_image,
+            title: place.name
+          };
+
+          var marker = new window.google.maps.Marker(markerOptions);
+          // var info = new window.google.maps.InfoWindow(infoWindowContent);
+          // marker.addListener(marker, 'click', function(){
+          //   info.open(newMap, this);
+          // });
+          (function(marker, place) {
+            var infoWindowContent =
+              "<p><strong>"+place.name+"</strong></p>"+
+              "<p>"+place.vicinity+"</p>";
+            window.google.maps.event.addListener(marker, "click", function(e){
+              infoWindow.setContent(infoWindowContent);
+              infoWindow.open(newMap, marker);
+            });
+          })(marker, place);
         }
       }
     };
