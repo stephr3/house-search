@@ -24,14 +24,14 @@ export default Ember.Service.extend({
       if (status === "OK") {
         for (var i=0; i<results.length; i++) {
           var place = results[i];
-          var school_image = {
-            url: 'images/school-emoji.png',
-            scaledSize: new window.google.maps.Size(22,32)
-          };
+          // var school_image = {
+          //   url: 'images/school-emoji.png',
+          //   scaledSize: new window.google.maps.Size(22,32)
+          // };
           var markerOptions = {
             position: {lat: place.geometry.location.lat(), lng: place.geometry.location.lng()},
             map: newMap,
-            icon: school_image,
+            icon: place.icon,
             title: place.name
           };
 

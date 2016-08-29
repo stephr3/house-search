@@ -29,13 +29,29 @@ export default Ember.Component.extend({
       marker.addListener('click', function(){
         info.open(newMap, marker);
       });
-      var request = {
+      var schoolRequest = {
         location: this.get('map').center(latitude, longitude),
         radius: '1000',
         type: 'school'
       };
       var service = this.get('map').createService(newMap);
-      this.get('map').getPlaces(service, newMap, request);
+      this.get('map').getPlaces(service, newMap, schoolRequest);
+
+      var groceryRequest = {
+        location: this.get('map').center(latitude, longitude),
+        radius: '1000',
+        type: 'grocery_or_supermarket'
+      };
+      var service = this.get('map').createService(newMap);
+      this.get('map').getPlaces(service, newMap, groceryRequest);
+
+      var hospitalRequest = {
+        location: this.get('map').center(latitude, longitude),
+        radius: '1000',
+        type: 'hospital'
+      };
+      var service = this.get('map').createService(newMap);
+      this.get('map').getPlaces(service, newMap, hospitalRequest);
     }
   }
 });
