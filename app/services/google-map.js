@@ -17,21 +17,18 @@ export default Ember.Service.extend({
   createInfoWindow(content) {
     return new this.googleMaps.InfoWindow(content);
   },
-  getPlaces(service, map, request) {
+  getPlaces(service, map, request, requestImage) {
     var callback = function(results, status) {
       var newMap = map;
       var infoWindow = new window.google.maps.InfoWindow();
       if (status === "OK") {
         for (var i=0; i<results.length; i++) {
           var place = results[i];
-          // var school_image = {
-          //   url: 'images/school-emoji.png',
-          //   scaledSize: new window.google.maps.Size(22,32)
-          // };
+          var image = requestImage;
           var markerOptions = {
             position: {lat: place.geometry.location.lat(), lng: place.geometry.location.lng()},
             map: newMap,
-            icon: place.icon,
+            icon: image,
             title: place.name
           };
 
