@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.findById(params.post_id);
+  model(params) {
+    return this.store.findRecord('house', params.house_id);
   },
   actions: {
     goBackToList: function() {

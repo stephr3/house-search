@@ -26,7 +26,7 @@ export default Ember.Component.extend({
       //place marker
       var image = {
         url: 'images/house-emoji.png',
-        scaledSize: new google.maps.Size(32, 32)
+        scaledSize: new window.google.maps.Size(32, 32)
       };
       var markerOptions = {
         position: {lat: latitude, lng: longitude},
