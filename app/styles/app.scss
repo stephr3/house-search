@@ -39,6 +39,24 @@
   }
 }
 
+.custom-styles-modal {
+  max-width: 80%;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: auto;
+  .inside-modal {
+    max-width: 90%;
+    margin: 30px auto 10px;
+    img {
+      width: 100%;
+    }
+    .key-li {
+      img {
+        width: 20px;
+      }
+    }
+  }
+}
 .modal-close {
   font-size: 2em;
   color: lightgray;
@@ -50,4 +68,19 @@
 .modal-close:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+.key-icon {
+  float:left;
+  display: inline-block;
+  margin-right: 5px;
+}
+ul {
+  list-style: none;
+}
+
+.key-li {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 10px 0;
 }
