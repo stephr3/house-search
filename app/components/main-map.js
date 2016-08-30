@@ -13,7 +13,7 @@ export default Ember.Component.extend({
       var newMap = this.get('map').findMap(container, options);
       this.get('map').createBikeLayer(newMap);
       //place markers
-      // var info= this.get('map').createInfoWindow();
+      var info= this.get('map').createInfoWindow();
 
       for (var i=0; i<markers.length; i++) {
         var data = markers[i];
@@ -23,12 +23,12 @@ export default Ember.Component.extend({
           map: newMap,
           title: data.get('address')
         });
-        // var content = "<p>"+data.get('address')+"</p><p>"+ data.get('beds') + " beds | "+data.get('baths')+" baths | $"+ data.get('price');
-        // var service = this.get('map');
-        // (function (marker, data, newMap, content, info, service) {
-        //   {{debugger}}
-        //   service.addClickEvent(marker, data, newMap, content, info);
-        // }) (marker, data);
+        var content = "<p>"+data.get('address')+"</p><p>"+ data.get('beds') + " beds | "+data.get('baths')+" baths | $"+ data.get('price');
+        var service = this.get('map');
+        (function (marker, data, newMap, content, info, service) {
+          {{debugger}}
+          service.addClickEvent(marker, data, newMap, content, info);
+        }) (marker, data, newMap, content, info, service);
       }
     }
   }

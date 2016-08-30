@@ -27,8 +27,8 @@ export default Ember.Service.extend({
   },
   addClickEvent(marker, data, map, content, info) {
     this.googleMaps.event.addListener(marker, "click", function(e) {
-      infoWindow.setContent(content);
-      infoWindow.open(map, marker);
+      info.setContent(content);
+      info.open(map, marker);
     });
   },
   createDistanceMatrix(origin, epicodus) {
