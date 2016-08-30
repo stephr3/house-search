@@ -2,5 +2,5 @@
   <img src= {{house.image}} alt= {{house.address}}>
 {{/link-to}}
 <h3>{{house.address}}</h3>
-<h5>{{house.beds}} beds | {{house.baths}} baths | {{house.sqft}} sqft</h5>
+<h5>{{bed-display house.beds}} | {{bath-display house.baths}} | {{house.sqft}} sqft</h5>
 <h4>For Sale: ${{house.price}}</h4>

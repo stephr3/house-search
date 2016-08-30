@@ -23,7 +23,22 @@ export default Ember.Component.extend({
           map: newMap,
           title: data.get('address')
         });
-        var content = "<p>"+data.get('address')+"</p><p>"+ data.get('beds') + " beds | "+data.get('baths')+" baths | $"+ data.get('price');
+        //link needs to pass house object, so doesn't load...
+        var beds = function(beds) {
+          if(beds === 1){
+            return "bed";
+          } else {
+            return "beds";
+          }
+        };
+        var baths = function(baths) {
+          if(baths === 1){
+            return "bath";
+          } else {
+            return "baths";
+          }
+        };
+        var content = "<p><a href='"+data.get('id')+"'>"+data.get('address')+"</a></p><p>"+ data.get('beds') + " " + beds(data.get('beds'))+" | "+data.get('baths')+" "+ baths(data.get('baths'))+ " | $" + data.get('price');
         var service = this.get('map');
         (function (marker, data, newMap, content, info, service) {
           {{debugger}}
