@@ -47,13 +47,17 @@
   .inside-modal {
     max-width: 90%;
     margin: 30px auto 10px;
+    .key-li {
+      list-style-type: none;
+      margin-left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      img {
+        width: 30px;
+      }
+    }
     img {
       width: 100%;
-    }
-    .key-li {
-      img {
-        width: 20px;
-      }
     }
   }
 }
@@ -79,8 +83,16 @@ ul {
   list-style: none;
 }
 
-.key-li {
-  list-style-type: none;
-  margin-left: 0;
-  padding: 10px 0;
+
+
+.main-map {
+  max-width: 80%;
+  margin: auto;
+  .btn {
+    margin-left: 5%;
+  }
+  .map-display {
+    width: 90%;
+    margin: auto;
+  }
 }

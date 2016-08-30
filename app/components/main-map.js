@@ -8,7 +8,7 @@ export default Ember.Component.extend({
       var container = this.$('.map-display')[0];
       var options = {
         center: this.get('map').center(markers[0].get('latitude'), markers[0].get('longitude')),
-        zoom: 15,
+        zoom: 12,
       };
       var newMap = this.get('map').findMap(container, options);
       this.get('map').createBikeLayer(newMap);
