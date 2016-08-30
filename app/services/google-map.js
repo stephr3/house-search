@@ -22,7 +22,7 @@ export default Ember.Service.extend({
     // trafficLayer.setMap(map);
     // var transitLayer = new google.maps.TransitLayer();
     // transitLayer.setMap(map);
-    var bikeLayer = new google.maps.BicyclingLayer();
+    var bikeLayer = new window.google.maps.BicyclingLayer();
     bikeLayer.setMap(map);
   },
   addClickEvent(marker, data, map, content, info) {
@@ -33,13 +33,13 @@ export default Ember.Service.extend({
   },
   createDistanceMatrix(origin, epicodus) {
     var distanceResults = {};
-    var service = new google.maps.DistanceMatrixService();
+    var service = new window.google.maps.DistanceMatrixService();
     distanceResults = service.getDistanceMatrix(
       {
         origins: [origin],
         destinations: [epicodus],
         travelMode: 'BICYCLING',
-        unitSystem: google.maps.UnitSystem.IMPERIAL
+        unitSystem: window.google.maps.UnitSystem.IMPERIAL
       }, callback);
     function callback(response, status) {
       if (status === 'OK') {
@@ -61,7 +61,7 @@ export default Ember.Service.extend({
       console.log(distanceResults, 'in callback service');
       return distanceResults;
     }
-    console.log(distanceResults, 'after callback service')
+    console.log(distanceResults, 'after callback service');
     return distanceResults;
   },
   getPlaces(service, map, request, requestImage) {

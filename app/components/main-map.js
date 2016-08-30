@@ -18,7 +18,7 @@ export default Ember.Component.extend({
       for (var i=0; i<markers.length; i++) {
         var image = {
             url: "images/house-emoji.png",
-            scaledSize: new google.maps.Size(32, 32)
+            scaledSize: new window.google.maps.Size(32, 32)
         };
         var data = markers[i];
         var myLatlng = this.get('map').center(data.get('latitude'), data.get('longitude'));
@@ -45,7 +45,7 @@ export default Ember.Component.extend({
         };
         var formatMoney = function(money) {
           return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
+        };
         var content = "<p><a href='/show/"+data.get('id')+"'>"+data.get('address')+"</a></p><p>"+ data.get('beds') + " " + beds(data.get('beds'))+" | "+data.get('baths')+" "+ baths(data.get('baths'))+ " | $" + formatMoney(data.get('price'));
         var service = this.get('map');
         (function (marker, data, newMap, content, info, service) {
