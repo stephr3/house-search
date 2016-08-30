@@ -38,3 +38,16 @@
     opacity: .8;
   }
 }
+
+.modal-close {
+  font-size: 2em;
+  color: lightgray;
+  opacity: .8;
+  position: fixed;
+  right: 15%;
+  top: 22%;
+}
+.modal-close:hover {
+  opacity: 1;
+  cursor: pointer;
+}

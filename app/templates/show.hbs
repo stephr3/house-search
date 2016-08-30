@@ -1,4 +1,5 @@
-{{#modal-dialog close="goBackToList"}}
+{{#modal-dialog close="goBackToList" translucentOverlay=true}}
+  <span class="glyphicon glyphicon-remove modal-close" {{action 'goBackToList'}}></span>
   <img src= {{model.image}} alt= {{model.address}}>
   <h3>{{model.address}}</h3>
   <h5>{{model.beds}} beds | {{model.baths}} baths | {{model.sqft}} sqft</h5>
