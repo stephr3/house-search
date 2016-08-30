@@ -4,79 +4,96 @@ export default Ember.Component.extend({
   map: Ember.inject.service('google-map'),
   distanceMatrixResults: [],
   actions: {
-    createMap(params) {
+    createMap(markers) {
       //init map
-      var latitude = 45.561145;
-      var longitude = -122.6463247;
+      // var latitude = 45.561145;
+      // var longitude = -122.6463247;
       var container = this.$('.map-display')[0];
       var options = {
-        center: this.get('map').center(latitude, longitude),
+        center: this.get('map').center(markers[0].get('latitude'), markers[0].get('longitude')),
         zoom: 15,
       };
       var newMap = this.get('map').findMap(container, options);
       this.get('map').createBikeLayer(newMap);
-      //init distance matrix
-      var origin = this.get('map').center(latitude, longitude);
-      var epicodus = this.get('map').center(45.5207086, -122.6795911);
-      var results = this.get('map').createDistanceMatrix(origin, epicodus);
-      {{debugger}}
-      (this.get('distanceMatrixResults')).pushObject(this.get('map').createDistanceMatrix(origin, epicodus));
-      console.log(this.get('distanceMatrixResults'), 'google-map component js');
+      // //init distance matrix
+      // var origin = this.get('map').center(latitude, longitude);
+      // var epicodus = this.get('map').center(45.5207086, -122.6795911);
+      // var results = this.get('map').createDistanceMatrix(origin, epicodus);
+      // {{debugger}}
+      // (this.get('distanceMatrixResults')).pushObject(this.get('map').createDistanceMatrix(origin, epicodus));
+      // console.log(this.get('distanceMatrixResults'), 'google-map component js');
       //place marker
-      var image = {
-        url: 'images/house-emoji.png',
-        scaledSize: new google.maps.Size(32, 32)
-      };
-      var markerOptions = {
-        position: {lat: latitude, lng: longitude},
-        map: newMap,
-        icon: image
-      };
-      var marker = this.get('map').createMarker(markerOptions);
-      //home infowindow
-      var infoWindowContent = {
-        content: "<p><strong>Your future home!</strong></p>"
-      };
-      var info = this.get('map').createInfoWindow(infoWindowContent);
-      marker.addListener('click', function(){
-        info.open(newMap, marker);
-      });
-      //school points of interest
-      var schoolRequest = {
-        location: this.get('map').center(latitude, longitude),
-        radius: '1000',
-        type: 'school'
-      };
-      var schoolImage = {
-        url: 'images/school-emoji.png',
-        scaledSize: new window.google.maps.Size(32,32)
-      };
-      var service = this.get('map').createService(newMap);
-      this.get('map').getPlaces(service, newMap, schoolRequest, schoolImage);
-      //grocery points of interest
-      var groceryRequest = {
-        location: this.get('map').center(latitude, longitude),
-        radius: '1000',
-        type: 'grocery_or_supermarket'
-      };
-      var groceryImage = {
-        url: 'images/grocery-emoji.png',
-        scaledSize: new window.google.maps.Size(32,32)
-      };
-      var service = this.get('map').createService(newMap);
-      this.get('map').getPlaces(service, newMap, groceryRequest, groceryImage);
-      //hospital points of interest
-      var hospitalRequest = {
-        location: this.get('map').center(latitude, longitude),
-        radius: '1000',
-        type: 'hospital'
-      };
-      var hospitalImage = {
-        url: 'images/hospital-emoji.png',
-        scaledSize: new window.google.maps.Size(32,32)
-      };
-      var service = this.get('map').createService(newMap);
-      this.get('map').getPlaces(service, newMap, hospitalRequest, hospitalImage);
+      var info= this.get('map').createInfoWindow();
+
+      for (var i=0; i<markers.length; i++) {
+        var data = markers[i];
+        var myLatlng = this.get('map').center(data.get('latitude'), data.get('longitude'));
+        var marker = this.get('map').createMarker({
+          position: myLatlng,
+          map: newMap,
+          title: data.get('address')
+        });
+        // var content = "<p>"+data.get('address')+"</p><p>"+ data.get('beds') + " beds | "+data.get('baths')+" baths | $"+ data.get('price');
+        // var service = this.get('map');
+        // (function (marker, data, newMap, content, info, service) {
+        //   {{debugger}}
+        //   service.addClickEvent(marker, data, newMap, content, info);
+        // }) (marker, data);
+      }
+      // var image = {
+      //   url: 'images/house-emoji.png',
+      //   scaledSize: new google.maps.Size(32, 32)
+      // };
+      // var markerOptions = {
+      //   position: {lat: latitude, lng: longitude},
+      //   map: newMap,
+      //   icon: image
+      // };
+      // var marker = this.get('map').createMarker(markerOptions);
+      // //home infowindow
+      // var infoWindowContent = {
+      //   content: "<p><strong>Your future home!</strong></p>"
+      // };
+      // var info = this.get('map').createInfoWindow(infoWindowContent);
+      // marker.addListener('click', function(){
+      //   info.open(newMap, marker);
+      // });
+      // //school points of interest
+      // var schoolRequest = {
+      //   location: this.get('map').center(latitude, longitude),
+      //   radius: '1000',
+      //   type: 'school'
+      // };
+      // var schoolImage = {
+      //   url: 'images/school-emoji.png',
+      //   scaledSize: new window.google.maps.Size(32,32)
+      // };
+      // var service = this.get('map').createService(newMap);
+      // this.get('map').getPlaces(service, newMap, schoolRequest, schoolImage);
+      // //grocery points of interest
+      // var groceryRequest = {
+      //   location: this.get('map').center(latitude, longitude),
+      //   radius: '1000',
+      //   type: 'grocery_or_supermarket'
+      // };
+      // var groceryImage = {
+      //   url: 'images/grocery-emoji.png',
+      //   scaledSize: new window.google.maps.Size(32,32)
+      // };
+      // var service = this.get('map').createService(newMap);
+      // this.get('map').getPlaces(service, newMap, groceryRequest, groceryImage);
+      // //hospital points of interest
+      // var hospitalRequest = {
+      //   location: this.get('map').center(latitude, longitude),
+      //   radius: '1000',
+      //   type: 'hospital'
+      // };
+      // var hospitalImage = {
+      //   url: 'images/hospital-emoji.png',
+      //   scaledSize: new window.google.maps.Size(32,32)
+      // };
+      // var service = this.get('map').createService(newMap);
+      // this.get('map').getPlaces(service, newMap, hospitalRequest, hospitalImage);
     }
   }
 });

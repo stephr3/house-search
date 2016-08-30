@@ -25,6 +25,12 @@ export default Ember.Service.extend({
     var bikeLayer = new google.maps.BicyclingLayer();
     bikeLayer.setMap(map);
   },
+  addClickEvent(marker, data, map, content, info) {
+    this.googleMaps.event.addListener(marker, "click", function(e) {
+      infoWindow.setContent(content);
+      infoWindow.open(map, marker);
+    });
+  },
   createDistanceMatrix(origin, epicodus) {
     var distanceResults = {};
     var service = new google.maps.DistanceMatrixService();
