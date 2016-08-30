@@ -1,0 +1,34 @@
+{ "houses": [{
+    "address": "5105 NE 22nd Ave, Portland, OR 97211",
+    "latitude": 45.575615,
+    "longitude": -122.627571,
+    "neighborhood": "NE",
+    "image": "http://photos1.zillowstatic.com/p_f/IS6qffw0euiqh91000000000.jpg",
+    "beds": 2,
+    "baths": 1,
+    "sqft": 1883,
+    "price": 420000
+  },
+  {
+    "address": "2533 SE Belmont St, Portland, OR 97214",
+    "latitude": 45.529696,
+    "longitude": -122.624695,
+    "neighborhood": "SE",
+    "image": "http://photos3.zillowstatic.com/p_f/ISeorhfu3wq7s90000000000.jpg",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 2688,
+    "price": 775000
+  },
+  {
+    "address": "3060 NW Cornell Rd, Portland, OR 97210",
+    "latitude": 45.560308,
+    "longitude": -122.665401,
+    "neighborhood": "NW",
+    "image": "http://photos1.zillowstatic.com/p_f/ISli8thfeex5wr1000000000.jpg",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2959,
+    "price": 975000
+  }]
+}
