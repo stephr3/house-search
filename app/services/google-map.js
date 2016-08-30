@@ -25,6 +25,39 @@ export default Ember.Service.extend({
     var bikeLayer = new google.maps.BicyclingLayer();
     bikeLayer.setMap(map);
   },
+  createDistanceMatrix(origin, epicodus) {
+    var distanceResults = {};
+    var service = new google.maps.DistanceMatrixService();
+    distanceResults = service.getDistanceMatrix(
+      {
+        origins: [origin],
+        destinations: [epicodus],
+        travelMode: 'BICYCLING',
+        unitSystem: google.maps.UnitSystem.IMPERIAL
+      }, callback);
+    function callback(response, status) {
+      if (status === 'OK') {
+        var origins = response.originAddresses;
+        var destinations = response.destinationAddresses;
+
+        for (var i = 0; i < origins.length; i++) {
+          var results = response.rows[i].elements;
+          for (var j = 0; j < results.length; j++) {
+            var element = results[j];
+            var distance = element.distance.text;
+            var duration = element.duration.text;
+            var from = origins[i];
+            var to = destinations[j];
+            distanceResults =  {'element': element, 'distance': distance, 'from': from, 'to': to, 'duration': duration};
+          }
+        }
+      }
+      console.log(distanceResults, 'in callback service');
+      return distanceResults;
+    }
+    console.log(distanceResults, 'after callback service')
+    return distanceResults;
+  },
   getPlaces(service, map, request, requestImage) {
     var callback = function(results, status) {
       var newMap = map;

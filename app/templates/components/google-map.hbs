@@ -1,4 +1,7 @@
 <div class="container">
   {{new-search createMap = "createMap"}}
   <div class="map-display"></div>
+  {{#if distanceMatrixResults}}
+    {{distance-matrix distanceMatrixResults}}
+  {{/if}}
 </div>
