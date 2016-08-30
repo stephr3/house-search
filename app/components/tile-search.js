@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    createMap() {
-      this.sendAction('createMap');
+    createMap(house) {
+      this.sendAction('createMap', house);
     }
   }
 });

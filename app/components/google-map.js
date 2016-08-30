@@ -4,10 +4,10 @@ export default Ember.Component.extend({
   map: Ember.inject.service('google-map'),
   distanceMatrixResults: [],
   actions: {
-    createMap() {
+    createMap(house) {
       //init map
-      var latitude = 45.561145;
-      var longitude = -122.6463247;
+      var latitude = house.get('latitude');
+      var longitude = house.get('longitude');
       var container = this.$('.map-display')[0];
       var options = {
         center: this.get('map').center(latitude, longitude),
