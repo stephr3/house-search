@@ -2,7 +2,7 @@
   <span class="glyphicon glyphicon-remove modal-close" {{action 'goBackToList'}}></span>
   <img src= {{model.image}} alt= {{model.address}}>
   <h3>{{model.address}}</h3>
-  <h5>{{model.beds}} beds | {{model.baths}} baths | {{model.sqft}} sqft</h5>
-  <h4>For Sale: ${{model.price}}</h4>
+  <h5>{{bed-display model.beds}} | {{bath-display model.baths}} | {{model.sqft}} sqft</h5>
+  <h4>For Sale: ${{format-money model.price}}</h4>
   <p>Lots of Details! Details Details Details!</p>
 {{/modal-dialog}}

@@ -38,10 +38,12 @@ export default Ember.Component.extend({
             return "baths";
           }
         };
-        var content = "<p><a href='"+data.get('id')+"'>"+data.get('address')+"</a></p><p>"+ data.get('beds') + " " + beds(data.get('beds'))+" | "+data.get('baths')+" "+ baths(data.get('baths'))+ " | $" + data.get('price');
+        var formatMoney = function(money) {
+          return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        var content = "<p><a href='"+data.get('id')+"'>"+data.get('address')+"</a></p><p>"+ data.get('beds') + " " + beds(data.get('beds'))+" | "+data.get('baths')+" "+ baths(data.get('baths'))+ " | $" + formatMoney(data.get('price'));
         var service = this.get('map');
         (function (marker, data, newMap, content, info, service) {
-          {{debugger}}
           service.addClickEvent(marker, data, newMap, content, info);
         }) (marker, data, newMap, content, info, service);
       }
