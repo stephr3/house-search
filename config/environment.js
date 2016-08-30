@@ -2,6 +2,12 @@
 
 module.exports = function(environment) {
   var ENV = {
+    firebase: {
+      apiKey: "AIzaSyAnGzU2Ypps2RbeSoZ7z3h2CsfwK6I0vaQ",
+      authDomain: "house-search-13b41.firebaseapp.com",
+      databaseURL: "https://house-search-13b41.firebaseio.com",
+      storageBucket: "house-search-13b41.appspot.com",
+    },
     modulePrefix: 'house-search',
     environment: environment,
     baseURL: '/',

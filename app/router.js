@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('google');
+  this.route('show', {path: '/:house_id'});    
 });
 
 export default Router;

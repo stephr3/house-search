@@ -1,0 +1,98 @@
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
+.map-display {
+  height: 600px;
+  width: 600px;
+}
+
+.hero-unit {
+  background-color:steelblue;
+  background-size:length;
+  height:25vh;
+  text-align: center;
+  h1 {
+    margin-top: 0;
+    color: white;
+    opacity: .9;
+    font-size: 6em;
+    padding-top: 5%;
+  }
+}
+
+
+@media screen and (max-width: 866px) {
+  .hero-unit h1 {
+    padding-top: 0;
+    font-size: 4.3em;
+  }
+}
+
+.house-tile {
+  max-width: 80%;
+  margin: 30px auto;
+  img {
+    width: 100%;
+  }
+  img:hover {
+    opacity: .8;
+  }
+}
+
+.custom-styles-modal {
+  max-width: 80%;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: auto;
+  .inside-modal {
+    max-width: 90%;
+    margin: 30px auto 10px;
+    .key-li {
+      list-style-type: none;
+      margin-left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      img {
+        width: 30px;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+.modal-close {
+  font-size: 2em;
+  color: lightgray;
+  opacity: .8;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+.modal-close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.key-icon {
+  float:left;
+  display: inline-block;
+  margin-right: 5px;
+}
+ul {
+  list-style: none;
+}
+
+
+
+.main-map {
+  max-width: 80%;
+  margin: auto;
+  .btn {
+    margin-left: 5%;
+  }
+  .map-display {
+    width: 90%;
+    margin: auto;
+  }
+}

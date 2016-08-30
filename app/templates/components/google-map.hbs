@@ -1,0 +1,17 @@
+<div class="container">
+  {{tile-search createMap = "createMap" house=house}}
+  <br>
+  <div class="map-display col-md-8"></div>
+  <div class="map-key col-md-3">
+    <ul>
+      <li><strong>Key</strong></li>
+      <hr>
+      <li class='key-li'><img src="images/house-emoji.png" class="key-icon"> Your Future Home!</li>
+      <li class='key-li'><img src="images/school-emoji.png" class="key-icon"> Schools</li>
+      <li class='key-li'><img src="images/grocery-emoji.png" class="key-icon"> Grocery Stores</li>
+    </ul>
+  </div>
+  {{#if distanceMatrixResults}}
+    {{distance-matrix distanceMatrixResults}}
+  {{/if}}
+</div>

@@ -1,1 +1,7 @@
-{{outlet}}
+{{#each model as |house|}}
+  <div class="house-tile" id= house.id>
+    {{house-tile house=house}}
+  </div>
+{{/each}}
+<hr>
+{{main-map houses=model}}
