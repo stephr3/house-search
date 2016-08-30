@@ -26,6 +26,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.zillowApiKey = process.env.zillowApiKey;
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
