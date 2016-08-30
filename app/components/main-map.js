@@ -16,12 +16,17 @@ export default Ember.Component.extend({
       var info= this.get('map').createInfoWindow();
 
       for (var i=0; i<markers.length; i++) {
+        var image = {
+            url: "images/house-emoji.png",
+            scaledSize: new google.maps.Size(32, 32)
+        };
         var data = markers[i];
         var myLatlng = this.get('map').center(data.get('latitude'), data.get('longitude'));
         var marker = this.get('map').createMarker({
           position: myLatlng,
           map: newMap,
-          title: data.get('address')
+          title: data.get('address'),
+          icon: image
         });
         //link needs to pass house object, so doesn't load...
         var beds = function(beds) {
