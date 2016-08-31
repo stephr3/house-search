@@ -3,7 +3,7 @@
     <img src= {{favoriteHouse.image}} alt= {{favoriteHouse.address}}>
   {{/link-to}}
   <h3>{{favoriteHouse.address}}</h3>
-  <h5>{{bed-display favoriteHouse.beds}} | {{bath-display favoriteHouse.baths}} | {{favoriteHouse.sqft}} sqft</h5>
+  <h5>{{bed-display favoriteHouse.beds}} &#9679; {{bath-display favoriteHouse.baths}} &#9679; {{favoriteHouse.sqft}} sqft</h5>
   <h4>For Sale: ${{format-money favoriteHouse.price}}</h4>
   <span {{action "removeFromFavorites" favoriteHouse}} class="fa fa-heart"></span>
 {{/each}}

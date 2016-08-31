@@ -21,6 +21,50 @@
     "price": 775000
   },
   {
+    "address": "2723 NE 9th Ave, Portland, OR 97212",
+    "latitude": 45.5425667,
+    "longitude": -122.6655917,
+    "neighborhood": "NE",
+    "image": "http://photos3.zillowstatic.com/p_f/IS2net23an5z940000000000.jpg",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 3794,
+    "price": 950000
+  },
+  {
+    "address": "4131 NE Cleveland Ave, Portland, OR 97211",
+    "latitude": 45.5538068,
+    "longitude": -122.6681068,
+    "neighborhood": "NE",
+    "image": "http://photos2.zillowstatic.com/p_f/IS2netmegd8mf51000000000.jpg",
+    "beds": 3,
+    "baths": 2,
+    "sqft": 2104,
+    "price": 350000
+  },
+  {
+    "address": "2853 N Emerson Ct, Portland, OR 97217",
+    "latitude": 45.5603077,
+    "longitude": -122.6979049,
+    "neighborhood": "N",
+    "image": "http://photos2.zillowstatic.com/p_f/ISad8keaus5kcl0000000000.jpg",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 2643,
+    "price": 499000
+  },
+  {
+    "address": "2717 SE Pine St, Portland, OR 97214",
+    "latitude": 45.520972,
+    "longitude": -122.6465887,
+    "neighborhood": "SE",
+    "image": "http://photos2.zillowstatic.com/p_f/IS2fonul9lkwsh1000000000.jpg",
+    "beds": 4,
+    "baths": 2,
+    "sqft": 2085,
+    "price": 499900
+  },
+  {
     "address": "3060 NW Cornell Rd, Portland, OR 97210",
     "latitude": 45.5318737,
     "longitude": -122.715389,
