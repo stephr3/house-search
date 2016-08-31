@@ -36,11 +36,9 @@
     width: 100%;
     height: 400px;
   }
-  a {
-    text-decoration:none;
-  }
   .house-tile-image-overlay {
     color: white;
+    background: rgba(0,0,0,0.25);
     padding-left: 20px;
     margin-top: -400px;
     width: 100%;
@@ -49,6 +47,11 @@
     .image-overlay-content {
       position: absolute;
       bottom: 0;
+      // -webkit-text-stroke: .5px black;
+      a {
+        text-decoration:none;
+        color: white;
+      }
     }
     .heart {
       position: absolute;
@@ -117,13 +120,11 @@ ul {
   }
 }
 
-// .fa-heart-o {
-//   background-color: rgba(0,0,0,0.5);
-// }
-
-
-
 .fa:hover {
   cursor: pointer;
   font-size: 1.5em;
 }
+// .gray {
+//   color: gray;
+//   -webkit-text-stroke: .5px black;
+// }
