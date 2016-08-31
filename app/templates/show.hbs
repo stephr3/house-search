@@ -2,6 +2,7 @@
   <span class="glyphicon glyphicon-remove modal-close" {{action 'goBackToList'}}></span>
   <div class="inside-modal">
     <img src= {{model.image}} alt= {{model.address}}>
+    {{sold-out house=model}}
     <div class="content">
       <div class="row">
         <div class="col-xs-8">
@@ -12,6 +13,7 @@
         <div class="col-xs-3 col-xs-offset-1">
           <h3 class="on-sale"><strong>ON SALE</strong></h3>
           <h3 class="price">${{format-money model.price}}</h3>
+          <button {{action "buyHouse" model}} class="btn btn-danger">Buy House!</button>
         </div>
       </div>
       {{google-map house=model}}

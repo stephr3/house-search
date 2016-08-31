@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('google');
   this.route('show', {path: '/show/:house_id'});
   this.route('favorite-houses');
+  this.route('houses-bought');
 });
 
 export default Router;
