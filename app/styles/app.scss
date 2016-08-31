@@ -54,6 +54,7 @@ body {
     max-width: 725px;
     height: 450px;
   }
+
   a {
     text-decoration: none;
   }
@@ -159,8 +160,6 @@ ul {
   }
 }
 
-
-
 .main-map {
   max-width: 90%;
   margin: auto;
@@ -188,16 +187,10 @@ ul {
   cursor: pointer;
   font-size: 1.5em;
 }
-<<<<<<< HEAD
-// .gray {
-//   color: gray;
-//   -webkit-text-stroke: .5px black;
-// }
-
 .sorting{
   padding-right: 15%;
   text-align: right;
-=======
+}
 .sold-out {
   margin-top: -315px;
   margin-bottom: 200px;
@@ -214,5 +207,4 @@ ul {
   margin-left: 25px;
   margin-top: 50px;
   font-size: 15pt;
->>>>>>> fcd982c20775becb56c628f0d5f02f1ba98e0eca
 }
