@@ -4,3 +4,8 @@
 <h3>{{house.address}}</h3>
 <h5>{{bed-display house.beds}} | {{bath-display house.baths}} | {{house.sqft}} sqft</h5>
 <h4>For Sale: ${{format-money house.price}}</h4>
+{{#if inList}}
+  <span {{action "removeFromFavorites" house}} class="fa fa-heart"></span>
+{{else}}
+  <span {{action "addToFavorites" house}} class="fa fa-heart-o"></span>
+{{/if}}

@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('google');
   this.route('show', {path: '/show/:house_id'});
+  this.route('favorite-houses');
 });
 
 export default Router;

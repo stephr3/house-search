@@ -19,7 +19,6 @@ export default Ember.Component.extend({
       // var origin = this.get('map').center(latitude, longitude);
       // var epicodus = this.get('map').center(45.5207086, -122.6795911);
       // var results = this.get('map').createDistanceMatrix(origin, epicodus);
-      // {{debugger}}
       // (this.get('distanceMatrixResults')).pushObject(this.get('map').createDistanceMatrix(origin, epicodus));
       // console.log(this.get('distanceMatrixResults'), 'google-map component js');
 
