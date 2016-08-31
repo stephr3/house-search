@@ -16,18 +16,17 @@ body {
   background-color:steelblue;
   height:25vh;
   text-align: center;
-  background-image: url("/images/index-pic.jpg");
+  background-image: url("/images/hero-img.jpg");
   background-size: cover;
   background-position: center;
   h1 {
     margin-top: 0;
     color: white;
-    font-size: 6em;
     text-shadow: 2px 2px #626262;
+    font-size: 8em;
     height: 100%;
     padding-top: 100px;
-    background: rgba(0,0,0,0.45);
-
+    background: rgba(0,0,0,0.3);
   }
 }
 
@@ -42,7 +41,7 @@ body {
 @media screen and (max-width: 866px) {
   .hero-unit h1 {
     // padding-top: 0;
-    font-size: 4.3em;
+    font-size: 6em;
   }
 }
 
@@ -52,11 +51,16 @@ body {
   margin: 30px auto;
   img {
     width: 100%;
-    height: 400px;
+    max-width: 725px;
+    height: 450px;
+  }
+  a {
+    text-decoration: none;
   }
   .house-tile-image-overlay {
     width: 100%;
-    height: 400px;
+    max-width: 725px;
+    height: 450px;
     position: relative;
     .image-overlay-content {
       color: white;
@@ -184,6 +188,7 @@ ul {
   cursor: pointer;
   font-size: 1.5em;
 }
+<<<<<<< HEAD
 // .gray {
 //   color: gray;
 //   -webkit-text-stroke: .5px black;
@@ -192,4 +197,22 @@ ul {
 .sorting{
   padding-right: 15%;
   text-align: right;
+=======
+.sold-out {
+  margin-top: -315px;
+  margin-bottom: 200px;
+  padding-left: 20px;
+  color: red;
+  -webkit-text-stroke: 1px black;
+  h1 {
+    font-size: 10em;
+    text-align: center;
+  }
+}
+
+.btn-danger {
+  margin-left: 25px;
+  margin-top: 50px;
+  font-size: 15pt;
+>>>>>>> fcd982c20775becb56c628f0d5f02f1ba98e0eca
 }
