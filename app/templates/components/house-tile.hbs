@@ -1,6 +1,7 @@
 <div class="house-tile-image-overlay">
   {{#link-to 'show' house}}
   <img src= {{house.image}} alt= {{house.address}}>
+  {{sold-out house=house}}
   <div class="image-overlay-content">
     <div class="row">
       <h2 class="col-xs-4">${{format-money house.price}}</h2>
