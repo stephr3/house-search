@@ -3,12 +3,12 @@
   <img src= {{house.image}} alt= {{house.address}}>
   <div class="image-overlay-content">
     <div class="row">
-      <h2 class="col-xs-5">${{format-money house.price}}</h2>
-      <h4 class="col-xs-7 details">{{bed-display house.beds}} &#9679; {{bath-display house.baths}} &#9679; {{house.sqft}} sqft</h4>
+      <h2 class="col-xs-4">${{format-money house.price}}</h2>
+      <h4 class="col-xs-5 col-xs-offset details">{{bed-display house.beds}} &#9679; {{bath-display house.baths}} &#9679; {{house.sqft}} sqft</h4>
     </div>
     <div class="row">
       <h4 class="col-xs-3">For Sale</h4>
-      <h4 class="gray col-xs-6">{{house.address}}</h4>
+      <h4 class="gray col-xs-7 col-xs-offset-1">{{house.address}}</h4>
     </div>
   </div>
   {{/link-to}}

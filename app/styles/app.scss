@@ -7,9 +7,9 @@ body {
 
 
 .map-display {
+  width: 75%;
   height: 600px;
-  width: 600px;
-  margin-bottom: 150px;
+  margin-bottom: 30px;
 }
 
 .hero-unit {
@@ -32,7 +32,7 @@ body {
 .navbar {
   .navbar-brand {
     color: #000000;
-    margin-right: 50px;
+    margin-right: 75px;
     font-size: 18pt;
   }
 }
@@ -69,10 +69,6 @@ body {
       }
       .details {
         margin-top: 28px;
-        margin-left: -175px;
-      }
-      .gray {
-        margin-left: -48px;
       }
     }
     .heart {
@@ -86,16 +82,20 @@ body {
 }
 
 .custom-styles-modal {
-  max-width: 80%;
+  max-width: 795px;
   max-height: 80vh;
   overflow-y: auto;
   margin: auto;
   .inside-modal {
     max-width: 100%;
-    margin-left: -9.5px;
+    margin-left: -10px;
+    margin-right: -100px;
     margin-top: -9.5px;
     .content {
       margin: 70px;
+    }
+    img {
+      width: 780px;
     }
     .key-li {
       list-style-type: none;
