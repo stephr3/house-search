@@ -4,7 +4,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model() {
     return this.store.findAll('house');
-  }
+  },
+  sortedHouses: Ember.computed.sort('houses',['price:asc']),
 
   // model: function() {
   //   var key = config.zillowApiKey;
