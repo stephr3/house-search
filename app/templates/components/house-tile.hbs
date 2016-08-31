@@ -1,11 +1,19 @@
 {{#link-to 'show' house}}
-  <img src= {{house.image}} alt= {{house.address}}>
+<img src= {{house.image}} alt= {{house.address}}>
 {{/link-to}}
-<h3>{{house.address}}</h3>
-<h5>{{bed-display house.beds}} | {{bath-display house.baths}} | {{house.sqft}} sqft</h5>
-<h4>For Sale: ${{format-money house.price}}</h4>
-{{#if inList}}
-  <span {{action "removeFromFavorites" house}} class="fa fa-heart"></span>
-{{else}}
-  <span {{action "addToFavorites" house}} class="fa fa-heart-o"></span>
-{{/if}}
+{{#link-to 'show' house}}
+<div class="house-tile-image-overlay">
+  <div class="image-overlay-content">
+    <h3>{{house.address}}</h3>
+    <h5>{{bed-display house.beds}} | {{bath-display house.baths}} | {{house.sqft}} sqft</h5>
+    <h4>For Sale: ${{format-money house.price}}</h4>
+  </div>
+  <div class="heart">
+    {{#if inList}}
+    <span {{action "removeFromFavorites" house}} class="fa fa-heart"></span>
+    {{else}}
+    <span {{action "addToFavorites" house}} class="fa fa-heart-o"></span>
+    {{/if}}
+  </div>
+</div>
+{{/link-to}}

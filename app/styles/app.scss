@@ -29,13 +29,33 @@
 }
 
 .house-tile {
-  max-width: 80%;
+  width: 80%;
+  max-width: 800px;
   margin: 30px auto;
   img {
     width: 100%;
+    height: 400px;
   }
-  img:hover {
-    opacity: .8;
+  a {
+    text-decoration:none;
+  }
+  .house-tile-image-overlay {
+    color: white;
+    padding-left: 20px;
+    margin-top: -400px;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    .image-overlay-content {
+      position: absolute;
+      bottom: 0;
+    }
+    .heart {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 40px;
+    }
   }
 }
 
@@ -96,6 +116,12 @@ ul {
     margin: auto;
   }
 }
+
+// .fa-heart-o {
+//   background-color: rgba(0,0,0,0.5);
+// }
+
+
 
 .fa:hover {
   cursor: pointer;
