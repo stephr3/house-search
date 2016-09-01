@@ -5,8 +5,8 @@ export default Ember.Route.extend ({
   model() {
     return this.store.findAll('house');
   },
-  sortedHouses: Ember.computed.sort('houses',['price:asc']),
-
+  sortedHouses: Ember.computed.sort('houses',['price:asc'])
+  
   // model: function() {
   //   var key = config.zillowApiKey;
   //   var url = 'http://www.zillow.com/webservice/GetUpdatedPropertyDetails.htm?zws-id=' +key+ '&zpid=48749425&output=json&callback=cb';

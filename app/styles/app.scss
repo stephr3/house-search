@@ -196,18 +196,26 @@ body {
   font-size: 15pt;
 }
 
-//////////////////////////////////// Favorites & Houses Bought Styling ////////////////////////////////////
-.page-titles {
+//////////////////////////////////// Favorites & Houses Bought  & Admin Styling ////////////////////////////////////
+.page-title {
   text-align: center;
   font-size: 45pt;
   margin-bottom: 50px;
 }
 
-.houses-bought-list {
+.houses-list {
   li {
     font-size: 18pt;
     margin-left: 75px;
   }
+}
+
+.glyphicon-remove {
+  color: #B22222;
+}
+
+.glyphicon-remove:hover {
+  cursor: pointer;
 }
 
 ////////////////////////////////////// Price & Sqft Styling //////////////////////////////////////

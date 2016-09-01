@@ -1,0 +1,12 @@
+<h1 class="page-title">Administrator</h1>
+{{new-house saveNewHouse="saveNewHouse"}}
+
+<h2 class="page-title">All Houses</h2>
+{{#each model as |house|}}
+  <ul class="houses-list">
+    <li>
+      {{house.address}}
+      <span {{action "deleteHouse" house}} class="glyphicon glyphicon-remove"></span>
+    </li>
+  </ul>
+{{/each}}

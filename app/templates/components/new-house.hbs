@@ -1,0 +1,51 @@
+{{#if addNewHouseForm}}
+  <div class="new-house">
+    <form class="form-group">
+      <div>
+        <label>Address</label>
+        {{input required value=address id="address" class="form-control"}}
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <label>Latitude</label>
+          {{input required value=latitude id="latitude" class="form-control"}}
+        </div>
+        <div class="col-xs-4">
+          <label>Longitude</label>
+          {{input required value=longitude id="longitude" class="form-control"}}
+        </div>
+        <div class="col-xs-4">
+          <label>Neighborhood Name</label>
+          {{input required value=neighborhood id="neighborhood" class="form-control"}}
+        </div>
+      </div>
+      <div>
+        <label>Image URL</label>
+        {{input required value=image id="image" class="form-control"}}
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <label>Number of Beds</label>
+          {{input required value=beds id="beds" class="form-control"}}
+        </div>
+        <div class="col-xs-6">
+          <label>Number of Baths</label>
+          {{input required value=baths id="baths" class="form-control"}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <label>Sqft.</label>
+          {{input required value=sqft id="sqft" class="form-control"}}
+        </div>
+        <div class="col-xs-6">
+          <label>Price</label>
+          {{input required value=price id="price" class="form-control"}}
+        </div>
+      </div>
+      <button {{action "saveNewHouse"}} class="btn btn-success">Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action "showNewHouseForm"}} class="btn btn-primary">Add New House</button>
+{{/if}}
