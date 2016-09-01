@@ -6,7 +6,7 @@
 
 ## Description
 
-Program description here.
+This program serves as a basic real estate app that allows users to favorite, buy, and sell houses. Houses can be viewed by price or by sqft, and detailed maps of nearby amenities are available for each house. Administrators have the ability to create, update, and delete existing houses.
 
 ## Setup/Installation Requirements
 
@@ -22,19 +22,30 @@ This program can only be accessed on a computer with Git and Atom software, and 
 
 ## Known Bugs
 
-No known bugs.
+* Add hospital icon to Key on house-modal
 
 ## Specifications
 
 The program should... | Example Input | Example Output
 ----- | ----- | -----
---- | --- | ---
+Have CRUD functionality for all houses on admin page | --- | ---
+Show all houses for sale & already sold on index | --- | ---
+Show locations of all houses on google maps, on index | --- | ---
+Show house details modal when a house tile is clicked on | --- | ---
+Show amenities (schools, grocery stores, hospitals) within 1000 meters of selected house on google maps, on the house modal | --- | ---
+Allow user to favorite a house | --- | ---
+Show all favorite houses on favorite houses page | --- | ---
+Sort houses by price (ascending or descending) on index | --- | ---
+Sort houses by sq. ft. (ascending or descending) on index | --- | ---
+Allow user to buy a house | --- | ---
+Show all bought houses on houses bought page | --- | ---
+Display house with a SOLD sign on index when bought | --- | ---
 
 ## Future Features
 
 HTML | CSS | EmberJS
 ----- | ----- | -----
---- | --- | ---
+--- | --- | Connect a real estate API so houses don't have to be hard-coded in
 
 ## Support and Contact Details
 
