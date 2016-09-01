@@ -45,6 +45,8 @@ Display house with a SOLD sign on index when bought | --- | ---
 
 HTML | CSS | EmberJS
 ----- | ----- | -----
+--- | --- | Toggle new house/update house forms & map buttons
+--- | --- | Create a service/computed property to change color of map house icon when the house tile is hovered on
 --- | --- | Connect a real estate API so houses don't have to be hard-coded in
 
 ## Support and Contact Details

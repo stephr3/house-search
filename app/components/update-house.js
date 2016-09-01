@@ -9,7 +9,7 @@ export default Ember.Component.extend ({
     updateHouse(house) {
       house.save();
       this.set("updateHouseForm", false);
-      this.transitionTo("index");
+      this.sendAction("updateHouse");
     }
   }
 });

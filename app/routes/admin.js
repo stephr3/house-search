@@ -10,10 +10,14 @@ export default Ember.Route.extend ({
       newHouse.save();
       this.transitionTo("index");
     },
+    updateHouse() {
+      this.transitionTo("index");
+    },
     deleteHouse(house) {
       if (confirm("Are you sure you want to delete this house?")) {
         house.destroyRecord();
       }
+      this.transitionTo("index");
     }
   }
 });

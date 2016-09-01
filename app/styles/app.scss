@@ -175,15 +175,15 @@ body {
 .modal-close {
   font-size: 2em;
   color: lightgray;
-  opacity: .8;
+  opacity: 0;
   position: fixed;
   right: 20px;
   top: 20px;
 }
 
 .modal-close:hover {
-  opacity: 1;
-  cursor: pointer;
+  opacity: 0;
+  // cursor: pointer;
 }
 
 ////////////////////////////////////// Buttons Styling //////////////////////////////////////
@@ -255,10 +255,9 @@ form {
     margin-left: 75px;
     margin-top: -35px;
   }
-}
-
-.glyphicon-remove {
-  color: #B22222;
+  .glyphicon-remove {
+    color: #B22222;
+  }
 }
 
 .glyphicon-remove:hover, .glyphicon-pencil:hover {
