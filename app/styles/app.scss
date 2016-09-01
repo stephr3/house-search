@@ -5,16 +5,9 @@ body {
   font-family: serif;
 }
 
-
-.map-display {
-  width: 75%;
-  height: 600px;
-  margin-bottom: 30px;
-}
-
+////////////////////////////////////// Navbar Styling //////////////////////////////////////
 .hero-unit {
-  background-color:steelblue;
-  height:25vh;
+  height: 25vh;
   text-align: center;
   background-image: url("/images/hero-img.jpg");
   background-size: cover;
@@ -25,7 +18,7 @@ body {
     text-shadow: 2px 2px #626262;
     font-size: 8em;
     height: 100%;
-    padding-top: 100px;
+    padding-top: 50px;
     background: rgba(0,0,0,0.3);
   }
 }
@@ -45,6 +38,47 @@ body {
   }
 }
 
+////////////////////////////////////// Maps Styling //////////////////////////////////////
+.map-display {
+  width: 75%;
+  height: 600px;
+  margin-bottom: 50px;
+}
+
+.main-map {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  .btn {
+    font-size: 20pt;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .map-display {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}
+
+.key-title {
+  font-size: 15pt;
+}
+
+.key-icon {
+  float:left;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.map-key {
+  ul {
+    list-style: none;
+  }
+}
+
+////////////////////////////////////// House Tile Styling //////////////////////////////////////
 .house-tile {
   width: 80%;
   max-width: 800px;
@@ -54,7 +88,6 @@ body {
     max-width: 725px;
     height: 450px;
   }
-
   a {
     text-decoration: none;
   }
@@ -71,7 +104,7 @@ body {
       padding-left: 20px;
       bottom: 0;
       a {
-        text-decoration:none;
+        text-decoration: none;
         color: white;
       }
       .details {
@@ -88,6 +121,12 @@ body {
   }
 }
 
+.heart-icon:hover {
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+////////////////////////////////////// Modal Styling //////////////////////////////////////
 .custom-styles-modal {
   max-width: 795px;
   max-height: 80vh;
@@ -97,7 +136,7 @@ body {
     max-width: 100%;
     margin-left: -10px;
     margin-right: -100px;
-    margin-top: -9.5px;
+    margin-top: -10px;
     .content {
       margin: 70px;
     }
@@ -125,6 +164,7 @@ body {
     }
   }
 }
+
 .modal-close {
   font-size: 2em;
   color: lightgray;
@@ -139,20 +179,7 @@ body {
   cursor: pointer;
 }
 
-.key-title {
-  font-size: 15pt;
-}
-
-.key-icon {
-  float:left;
-  display: inline-block;
-  margin-right: 5px;
-}
-
-ul {
-  list-style: none;
-}
-
+////////////////////////////////////// Buttons Styling //////////////////////////////////////
 .tile-search {
   .btn-primary {
     font-size: 15pt;
@@ -160,37 +187,36 @@ ul {
   }
 }
 
-.main-map {
-  max-width: 90%;
-  margin: auto;
+.btn-danger {
+  margin-left: 25px;
   margin-top: 50px;
-  .btn {
-    font-size: 20pt;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .map-display {
-    width: 95%;
-    margin: auto;
-    margin-bottom: 150px;
-  }
+  font-size: 15pt;
 }
 
-.favorite-title {
+//////////////////////////////////// Favorites & Houses Bought Styling ////////////////////////////////////
+.page-titles {
   text-align: center;
   font-size: 45pt;
   margin-bottom: 50px;
 }
 
-.fa:hover {
-  cursor: pointer;
-  font-size: 1.5em;
+.houses-bought-list {
+  li {
+    font-size: 18pt;
+    margin-left: 75px;
+  }
 }
+
+////////////////////////////////////// Price & Sqft Styling //////////////////////////////////////
 .sorting{
   padding-right: 15%;
   text-align: right;
+  .btn-info {
+    font-size: 15pt;
+    margin-right: 15px;
+  }
 }
+
 .sold-out {
   margin-top: -315px;
   margin-bottom: 200px;
@@ -201,10 +227,4 @@ ul {
     font-size: 10em;
     text-align: center;
   }
-}
-
-.btn-danger {
-  margin-left: 25px;
-  margin-top: 50px;
-  font-size: 15pt;
 }
