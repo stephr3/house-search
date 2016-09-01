@@ -9,11 +9,11 @@
       <div class="row">
         <div class="col-xs-4">
           <label>Latitude</label>
-          {{input required value=latitude id="latitude" class="form-control"}}
+          {{input required value=latitude id="latitude" class="form-control" type="number"}}
         </div>
         <div class="col-xs-4">
           <label>Longitude</label>
-          {{input required value=longitude id="longitude" class="form-control"}}
+          {{input required value=longitude id="longitude" class="form-control" type="number"}}
         </div>
         <div class="col-xs-4">
           <label>Neighborhood Name</label>
@@ -27,21 +27,21 @@
       <div class="row">
         <div class="col-xs-6">
           <label>Number of Beds</label>
-          {{input required value=beds id="beds" class="form-control"}}
+          {{input required value=beds id="beds" class="form-control" type="number"}}
         </div>
         <div class="col-xs-6">
           <label>Number of Baths</label>
-          {{input required value=baths id="baths" class="form-control"}}
+          {{input required value=baths id="baths" class="form-control" type="number"}}
         </div>
       </div>
       <div class="row">
         <div class="col-xs-6">
           <label>Sqft.</label>
-          {{input required value=sqft id="sqft" class="form-control"}}
+          {{input required value=sqft id="sqft" class="form-control" type="number"}}
         </div>
         <div class="col-xs-6">
           <label>Price</label>
-          {{input required value=price id="price" class="form-control"}}
+          {{input required value=price id="price" class="form-control" type="number"}}
         </div>
       </div>
       <button {{action "saveNewHouse"}} class="btn btn-success">Save</button>

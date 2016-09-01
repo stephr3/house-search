@@ -11,8 +11,8 @@ export default Ember.Route.extend ({
       this.transitionTo("index");
     },
     deleteHouse(house) {
-      if (confirm("Are you sure you want to delete this house from all records?")) {
-        house.destroyRecord();  
+      if (confirm("Are you sure you want to delete this house?")) {
+        house.destroyRecord();
       }
     }
   }
