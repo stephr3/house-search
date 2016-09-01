@@ -1,6 +1,7 @@
 {{#if addNewHouseForm}}
   <div class="new-house">
     <form class="form-group">
+      <h2>New House</h2>
       <div>
         <label>Address</label>
         {{input required value=address id="address" class="form-control"}}
@@ -47,5 +48,5 @@
     </form>
   </div>
 {{else}}
-  <button {{action "showNewHouseForm"}} class="btn btn-primary">Add New House</button>
+  <button {{action "showNewHouseForm"}} class="btn btn-primary add-new-house">Add New House</button>
 {{/if}}

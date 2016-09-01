@@ -4,9 +4,14 @@
 <h2 class="page-title">All Houses</h2>
 {{#each model as |house|}}
   <ul class="houses-list">
-    <li>
-      {{house.address}}
-      <span {{action "deleteHouse" house}} class="glyphicon glyphicon-remove"></span>
-    </li>
+    <div class="row">
+      <li>
+        <span class="col-xs-8">{{house.address}}</span>
+        <div class="col-xs-4">
+          {{update-house updateHouse="updateHouse" house=house}}
+          <span {{action "deleteHouse" house}} class="glyphicon glyphicon-remove col-xs-3"></span>
+        </div>
+      </li>
+    </div>
   </ul>
 {{/each}}

@@ -183,6 +183,14 @@ body {
 }
 
 ////////////////////////////////////// Buttons Styling //////////////////////////////////////
+.add-new-house {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15pt;
+  margin-bottom: 150px;
+}
+
 .tile-search {
   .btn-primary {
     font-size: 15pt;
@@ -196,6 +204,25 @@ body {
   font-size: 15pt;
 }
 
+////////////////////////////////////// Forms Styling //////////////////////////////////////
+form {
+  margin-left: 75px;
+  margin-right: 75pt;
+  h2 {
+    font-size: 22pt;
+  }
+  label {
+    margin-top: 15px;
+    font-size: 12pt;
+    font-weight: bold;
+  }
+  .btn-success {
+    margin-top: 25px;
+    font-size: 15pt;
+    margin-bottom: 75px;
+  }
+}
+
 //////////////////////////////////// Favorites & Houses Bought  & Admin Styling ////////////////////////////////////
 .page-title {
   text-align: center;
@@ -204,6 +231,8 @@ body {
 }
 
 .houses-list {
+  list-style: none;
+  margin-bottom: 50px;
   li {
     font-size: 18pt;
     margin-left: 75px;
@@ -214,7 +243,7 @@ body {
   color: #B22222;
 }
 
-.glyphicon-remove:hover {
+.glyphicon-remove:hover, .glyphicon-pencil:hover {
   cursor: pointer;
 }
 
