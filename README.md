@@ -1,53 +1,68 @@
-# House-search
+# House Search
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### Team Project for Epicodus, 09/02/2016
 
-## Prerequisites
+#### By Katie Tuttle, Rony Nasr, Stephanie Gurung & Shradha Pulla
 
-You will need the following things properly installed on your computer.
+## Description
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+Program description here.
 
-## Installation
+## Setup/Installation Requirements
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+This program can only be accessed on a computer with Git and Atom software, and Node.js, Ember CLI, PhantomJS, npm, and bower globally installed.
 
-## Running / Development
+* Clone this repository
+* To set up package managers, type the following into the command line:
+  * $ npm install
+  * $ bower install
+* To view the webpage, type the following:
+  * $ ember server
+  * Open Chrome and type in the following address: http://localhost:4200
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+## Known Bugs
 
-### Code Generators
+No known bugs.
 
-Make use of the many generators for code, try `ember help generate` for more details
+## Specifications
 
-### Running Tests
+The program should... | Example Input | Example Output
+----- | ----- | -----
+--- | --- | ---
 
-* `ember test`
-* `ember test --server`
+## Future Features
 
-### Building
+HTML | CSS | EmberJS
+----- | ----- | -----
+--- | --- | ---
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+## Support and Contact Details
 
-### Deploying
+Contact Epicodus for support in running this program.
 
-Specify what it takes to deploy your app.
+## Technologies Used
 
-## Further Reading / Useful Links
+* HTML
+* CSS
+* Bootstrap
+* Font Awesome
+* EmberJS
 
+## Further Reading and Useful Links
+
+* Make use of the many generators for code, try `ember help generate` for more details
 * [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
+* [ember-cli](http://ember-cli.com/)
+* Development Browser Extensions:
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+## Links
+
+Git Hub Repository: https://github.com/RonyNasr/house-search
+
+## License
+
+*This software is licensed under the GPL license.*
+
+Copyright (c) 2016 Katie Tuttle, Rony Nasr, Stephanie Gurung & Shradha Pulla
