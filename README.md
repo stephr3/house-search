@@ -22,7 +22,7 @@ This program can only be accessed on a computer with Git and Atom software, and 
 
 ## Known Bugs
 
-* Add hospital icon to Key on house-modal
+No known bugs.
 
 ## Specifications
 
