@@ -40,6 +40,7 @@ Sort houses by sq. ft. (ascending or descending) on index | --- | ---
 Allow user to buy a house | --- | ---
 Show all bought houses on houses bought page | --- | ---
 Display house with a SOLD sign on index when bought | --- | ---
+Display mortgage price on house-tile | --- | ---
 
 ## Future Features
 
