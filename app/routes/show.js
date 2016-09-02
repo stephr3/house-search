@@ -7,6 +7,9 @@ export default Ember.Route.extend ({
   actions: {
     goBackToList: function() {
       this.transitionTo('index');
+    },
+    buyHouse() {
+      this.transitionTo('houses-bought');
     }
   }
 });
