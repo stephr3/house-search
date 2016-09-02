@@ -5,7 +5,7 @@ export default Ember.Component.extend ({
   inList: Ember.computed('favoriteHouses.favoriteHousesList.[]', function(){
     return this.get('favoriteHouses').includesFavoriteHouse(this.get('house'));
   }),
-  mortgagePayment: Ember.computed('house.price',function() {
+  mortgagePayment: Ember.computed('house.price', function() {
     var p = this.get('house.price');
     var r = 0.003;
     var n = 360;

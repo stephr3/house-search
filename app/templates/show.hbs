@@ -13,6 +13,8 @@
         <div class="col-xs-3 col-xs-offset-1">
           <h3 class="on-sale"><strong>ON SALE</strong></h3>
           <h3 class="price">${{format-money model.price}}</h3>
+          <h3 class="on-sale"><strong>Mortgage</strong></h3>
+          {{mortgage-payment house=model}}
           <button {{action "buyHouse" model}} class="btn btn-danger">Buy House!</button>
         </div>
       </div>

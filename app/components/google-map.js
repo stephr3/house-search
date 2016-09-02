@@ -63,7 +63,7 @@ export default Ember.Component.extend ({
         url: 'images/grocery-emoji.png',
         scaledSize: new window.google.maps.Size(32,32)
       };
-      var service = this.get('map').createService(newMap);
+      service = this.get('map').createService(newMap);
       this.get('map').getPlaces(service, newMap, groceryRequest, groceryImage);
       //hospital points of interest
       var hospitalRequest = {
@@ -75,7 +75,7 @@ export default Ember.Component.extend ({
         url: 'images/hospital-emoji.png',
         scaledSize: new window.google.maps.Size(32,32)
       };
-      var service = this.get('map').createService(newMap);
+      service = this.get('map').createService(newMap);
       this.get('map').getPlaces(service, newMap, hospitalRequest, hospitalImage);
     }
   }

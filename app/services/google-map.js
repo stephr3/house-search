@@ -69,7 +69,7 @@ export default Ember.Service.extend ({
       var newMap = map;
       var infoWindow = new window.google.maps.InfoWindow();
       if (status === "OK") {
-        for (var i=0; i<results.length; i++) {
+        for (var i = 0; i < results.length; i ++) {
           var place = results[i];
           var image = requestImage;
           var markerOptions = {
