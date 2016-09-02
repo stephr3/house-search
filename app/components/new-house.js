@@ -16,7 +16,8 @@ export default Ember.Component.extend ({
         beds: this.get("beds"),
         baths: this.get("baths"),
         sqft: this.get("sqft"),
-        price: this.get("price")
+        price: this.get("price"),
+        description: this.get("description")
       };
       this.set("addNewHouseForm", false);
       this.sendAction("saveNewHouse", params);

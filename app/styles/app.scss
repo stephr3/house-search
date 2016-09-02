@@ -211,7 +211,9 @@ body {
 }
 
 #buy-house-btn {
-  margin-left: -2%;
+  margin-left: 0;
+  margin-top: 10px;
+  margin-bottom: 35px;
 }
 
 ////////////////////////////////////// Forms Styling //////////////////////////////////////
@@ -240,6 +242,10 @@ form {
   margin-bottom: -50px;
 }
 
+#buy-house-form {
+  margin-left: 0;
+}
+
 //////////////////////////////////// Favorites & Houses Bought  & Admin Styling ////////////////////////////////////
 .page-title {
   text-align: center;
@@ -256,13 +262,21 @@ form {
 .houses-list {
   list-style: none;
   margin-bottom: 50px;
-  li {
+  h2, li {
     font-size: 18pt;
     margin-left: 75px;
-    margin-top: -35px;
+    margin-top: 75px;
+  }
+  li {
+    margin-top: 0;
   }
   .glyphicon-remove {
     color: #B22222;
+  }
+  img {
+    border-radius: 50%;
+    width: 250px;
+    height: 200px;
   }
 }
 

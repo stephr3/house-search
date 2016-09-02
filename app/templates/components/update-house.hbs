@@ -44,6 +44,10 @@
           {{input value=house.price id="price" class="form-control" type="number"}}
         </div>
       </div>
+      <div>
+        <label>Description</label>
+        {{textarea value=house.description id="description" class="form-control"}}
+      </div>
       <button {{action "updateHouse" house}} class="btn btn-success">Save</button>
     </form>
   </div>
