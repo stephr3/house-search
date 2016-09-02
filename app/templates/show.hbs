@@ -1,24 +1,4 @@
 {{#modal-dialog close="goBackToList" translucentOverlay=true container-class='custom-styles-modal'}}
   <span class="glyphicon glyphicon-remove modal-close" {{action 'goBackToList'}}></span>
-  <div class="inside-modal">
-    <img src= {{model.image}} alt= {{model.address}}>
-    {{sold-out house=model}}
-    <div class="content">
-      <div class="row">
-        <div class="col-xs-8">
-          <h2>{{model.address}}</h2>
-          <h3><strong>{{bed-display model.beds}} &#9679; {{bath-display model.baths}} &#9679; {{model.sqft}} sqft</strong></h3>
-          <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
-        </div>
-        <div class="col-xs-3 col-xs-offset-1">
-          <h3 class="on-sale"><strong>ON SALE</strong></h3>
-          <h3 class="price">${{format-money model.price}}</h3>
-          <h3 class="on-sale"><strong>Mortgage</strong></h3>
-          {{mortgage-payment house=model}}
-          <button {{action "buyHouse" model}} class="btn btn-danger">Buy House!</button>
-        </div>
-      </div>
-      {{google-map house=model}}
-    </div>
-  </div>
+  {{inside-modal house=model buyHouse="buyHouse"}}
 {{/modal-dialog}}
