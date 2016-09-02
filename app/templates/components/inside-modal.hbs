@@ -11,7 +11,12 @@
       <div class="col-xs-3 col-xs-offset-1">
         <h3 class="on-sale"><strong>ON SALE</strong></h3>
         <h3 class="price">${{format-money house.price}}</h3>
+        {{log alreadySold}}
+        {{#if alreadySold}}
+        <h3 style="color:red">This house has already sold.</h3>
+        {{else}}
         <button {{action "showForm"}} class="btn btn-danger">Buy House!</button>
+        {{/if}}
       </div>
     </div>
     {{#if showForm}}
