@@ -10,6 +10,7 @@ export default DS.Model.extend ({
   baths: DS.attr(),
   sqft: DS.attr(),
   price: DS.attr(),
+  description: DS.attr(),
   time_sold: DS.attr(),
   user: DS.belongsTo('user', {async:true})
 });

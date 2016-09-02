@@ -260,10 +260,13 @@ form {
 .houses-list {
   list-style: none;
   margin-bottom: 50px;
-  h2 {
+  h2, li {
     font-size: 18pt;
     margin-left: 75px;
     margin-top: 75px;
+  }
+  li {
+    margin-top: 0;
   }
   .glyphicon-remove {
     color: #B22222;
