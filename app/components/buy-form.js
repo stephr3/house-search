@@ -11,10 +11,11 @@ export default Ember.Component.extend({
       var minDownPayment = this.get('house').get('price') * 0.03;
       var minSalary = this.get('house').get('price') * 0.2;
       if ((down_payment >= minDownPayment) && salary >= minSalary) {
+        alert('Congratulations, ' + first_name + '! You have successfully purchased this house!');
         this.get("housesBought").buyHouse(house);
         this.sendAction('buyHouse');
       } else {
-        this.sendAction('rejectBuyer'); 
+        this.sendAction('rejectBuyer');
       }
     }
   }
