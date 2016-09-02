@@ -20,7 +20,10 @@
       </div>
     </div>
     {{#if showForm}}
-    {{buy-form house=house buyHouse="buyHouse"}}
+      {{buy-form house=house buyHouse="buyHouse" rejectBuyer="rejectBuyer"}}
+    {{/if}}
+    {{#if showRejection}}
+      <h2>We're sorry, but your down payment and salary do not qualify you to buy this house.</h2>
     {{/if}}
     <!-- {{google-map house=house}} -->
   </div>

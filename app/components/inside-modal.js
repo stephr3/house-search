@@ -6,6 +6,7 @@ export default Ember.Component.extend({
     return this.get('housesBought').includes(this.get('house'));
   }),
   showForm: false,
+  showRejection: false,
   actions: {
     showForm() {
       this.set('showForm', true);
@@ -13,6 +14,10 @@ export default Ember.Component.extend({
     buyHouse() {
       this.set('showForm', false);
       this.sendAction('buyHouse');
+    },
+    rejectBuyer() {
+      this.set('showForm', false);
+      this.set('showRejection', true);
     }
   }
 });
