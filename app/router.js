@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('show', {path: '/show/:house_id'});
   this.route('favorite-houses');
   this.route('houses-bought');
+  this.route('admin');
 });
 
 export default Router;

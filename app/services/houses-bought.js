@@ -5,7 +5,7 @@ export default Ember.Service.extend ({
   buyHouse(house) {
     var duplicateHousesList = this.get("boughtHousesList").slice();
     if (duplicateHousesList.contains(house)) {
-      alert("This house is sold!");
+      alert("This house is already sold!");
     } else {
       this.get("boughtHousesList").pushObject(house);
     }

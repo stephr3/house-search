@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Service.extend({
+export default Ember.Service.extend ({
   googleMaps: window.google.maps,
   findMap(container, options) {
     return new this.googleMaps.Map(container, options);
@@ -69,7 +69,7 @@ export default Ember.Service.extend({
       var newMap = map;
       var infoWindow = new window.google.maps.InfoWindow();
       if (status === "OK") {
-        for (var i=0; i<results.length; i++) {
+        for (var i = 0; i < results.length; i ++) {
           var place = results[i];
           var image = requestImage;
           var markerOptions = {

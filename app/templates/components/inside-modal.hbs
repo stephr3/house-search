@@ -11,7 +11,8 @@
       <div class="col-xs-3 col-xs-offset-1">
         <h3 class="on-sale"><strong>ON SALE</strong></h3>
         <h3 class="price">${{format-money house.price}}</h3>
-        {{log alreadySold}}
+        <h3 class="on-sale"><strong>Mortgage</strong></h3>
+        {{mortgage-payment house=house}}
         {{#if alreadySold}}
         <h3 style="color:red">This house has already sold.</h3>
         {{else}}
@@ -25,6 +26,6 @@
     {{#if showRejection}}
       <h2>We're sorry, but your down payment and salary do not qualify you to buy this house.</h2>
     {{/if}}
-    <!-- {{google-map house=house}} -->
+    {{google-map house=house}}
   </div>
 </div>

@@ -1,3 +1,5 @@
 {{#each housesBought.boughtHousesList as |boughtHouse|}}
-  <h2>{{boughtHouse.address}}</h2>
+  <ul class="houses-list">
+    <li>{{boughtHouse.address}}: ${{format-money boughtHouse.price}}</li>
+  </ul>
 {{/each}}

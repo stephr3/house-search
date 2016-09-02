@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
+export default DS.Model.extend ({
   address: DS.attr(),
   latitude: DS.attr(),
   longitude: DS.attr(),
