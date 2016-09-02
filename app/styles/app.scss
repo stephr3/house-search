@@ -1,8 +1,9 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
-
+@import 'https://fonts.googleapis.com/css?family=Tenor+Sans|Fredericka+the+Great|Tauri';
 body {
   font-family: serif;
+
 }
 
 ////////////////////////////////////// Navbar Styling //////////////////////////////////////
@@ -20,6 +21,7 @@ body {
     height: 100%;
     padding-top: 50px;
     background: rgba(0,0,0,0.3);
+    font-family: 'Tenor Sans', sans-serif;
   }
 }
 
