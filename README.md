@@ -37,7 +37,7 @@ Allow user to favorite a house | Favorite Houses: 0, add 5105 NE 22nd Ave | Favo
 Show all favorite houses on favorite houses page | Favorite Houses: 2 | 5105 NE 22nd Ave, Portland, OR 97211; 2533 SE ...
 Sort houses by price (ascending or descending) on index | --- | ---
 Sort houses by sq. ft. (ascending or descending) on index | --- | ---
-Allow user to buy a house | 5105 NE 22nd Ave, click "Buy House" | 5105 NE 22nd Ave: SOLD
+Allow user to buy a house if the user has a downpayment of at least 3% of the house price, and their salary is 20% of the house price | 5105 NE 22nd Ave, click "Buy House" | 5105 NE 22nd Ave: SOLD
 Show all bought houses on houses bought page | Houses: 7, Houses Sold: 0 | Houses: 7, Houses Sold: 3
 Calculate mortgage price on house-tile | 5105 NE 22nd Ave: $420,000 | 5105 NE 22nd Ave: Monthly Payment = $1,909.51
 
@@ -49,6 +49,7 @@ HTML | CSS | EmberJS
 --- | --- | Toggle new house/update house forms & map buttons
 --- | --- | Create a service/computed property to change color of map house icon when the house tile is hovered on
 --- | --- | Connect a real estate API so houses don't have to be hard-coded in
+--- | --- | Create user object when a user buys a house 
 
 ## Support and Contact Details
 

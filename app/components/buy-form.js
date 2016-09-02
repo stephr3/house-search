@@ -5,7 +5,6 @@ export default Ember.Component.extend({
   actions: {
     buyHouse(house) {
       var first_name = this.get('first_name');
-      var last_name = this.get('last_name');
       var down_payment = parseInt(this.get('down_payment'));
       var salary = parseInt(this.get('salary'));
       var minDownPayment = this.get('house').get('price') * 0.03;
